@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session9lab1.phonelistController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="580.0">
+         <children>
+            <Text layoutX="171.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" textAlignment="CENTER" wrappingWidth="238.744140625">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tbView" layoutX="46.0" layoutY="142.0" prefHeight="472.0" prefWidth="513.0">
+              <columns>
+                <TableColumn fx:id="cName" prefWidth="151.0" style="-fx-alignment: CENTER-LEFT;" text="Name" />
+                <TableColumn fx:id="cPhone" prefWidth="195.0" style="-fx-alignment: CENTER;" text="Phone number" />
+                  <TableColumn fx:id="cEdit" prefWidth="67.0" style="-fx-alignment: CENTER;" text="Edit" />
+                  <TableColumn fx:id="cRemove" prefWidth="99.0" style="-fx-alignment: CENTER;" text="Remove" />
+              </columns>
+            </TableView>
+            <Button layoutX="432.0" layoutY="659.0" mnemonicParsing="false" onAction="#addScreen" text="+ Add contact" textAlignment="CENTER" />
+            <TextField fx:id="txtSearch" layoutX="372.0" layoutY="54.0" prefHeight="38.0" prefWidth="200.0" promptText="Find contact" />
+            <Button layoutX="509.0" layoutY="54.0" mnemonicParsing="false" onAction="#findByName" prefHeight="38.0" prefWidth="63.0" text="Find" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

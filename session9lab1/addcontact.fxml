@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session9lab1.addcontactController">
+   <children>
+      <Text layoutX="120.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add contact" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtName" layoutX="107.0" layoutY="145.0" prefHeight="55.0" prefWidth="186.0" promptText="Name" />
+      <TextField fx:id="txtPhone" layoutX="107.0" layoutY="236.0" prefHeight="55.0" prefWidth="186.0" promptText="Phone number" />
+      <Button layoutX="70.0" layoutY="351.0" mnemonicParsing="false" onAction="#submit" prefHeight="47.0" prefWidth="100.0" text="Submit" />
+      <Button layoutX="231.0" layoutY="351.0" mnemonicParsing="false" onAction="#listScreen" prefHeight="47.0" prefWidth="100.0" text="View all" />
+      <Text fx:id="noti" fill="BLUE" layoutX="79.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Error" textAlignment="CENTER" visible="false" wrappingWidth="242.6708984375" />
+   </children>
+</Pane>
