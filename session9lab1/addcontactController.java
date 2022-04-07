@@ -12,13 +12,6 @@ import java.io.IOException;
 public class addcontactController {
     public TextField txtName,txtPhone;
     public Text noti;
-    public contact contact;
-
-    public void setData(contact contact){
-        this.contact = contact;
-        txtName.setText(contact.getName());
-        txtPhone.setText(contact.getPhonenumber().toString());
-    }
 
     public void submit(){
         try {
@@ -29,23 +22,23 @@ public class addcontactController {
                 if(ct.getName().equals(txtName.getText())){
                     for(String s:ct.phonenumber){
                         if(s.equals(txtPhone.getText())){
-                            noti.setVisible(true);
-                            noti.setFill(Paint.valueOf("RED"));
-                            noti.setText("This contact has already existed");
+                            this.noti.setText("This contact has already existed");
+                            this.noti.setFill(Paint.valueOf("RED"));
+                            this.noti.setVisible(true);
                             return;
                         }
                     }
                     ct.phonenumber.add(txtPhone.getText());
-                    noti.setVisible(true);
-                    noti.setFill(Paint.valueOf("BLUE"));
-                    noti.setText("New number phone has been added to contact " + ct.getName());
+                    this.noti.setText("New phone number has been added");
+                    this.noti.setFill(Paint.valueOf("BLUE"));
+                    this.noti.setVisible(true);
                     return;
                 }
             }
             Main.phoneList.add(new contact(txtName.getText(),txtPhone.getText()));
-            noti.setVisible(true);
-            noti.setFill(Paint.valueOf("BLUE"));
-            noti.setText("New contact has been added");
+            this.noti.setText("New contact has been added");
+            this.noti.setFill(Paint.valueOf("BLUE"));
+            this.noti.setVisible(true);
         }catch (Exception e){
             noti.setText(e.getMessage());
             noti.setVisible(true);

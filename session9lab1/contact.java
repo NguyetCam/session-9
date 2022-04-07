@@ -18,9 +18,9 @@ public class contact {
         this.edit = new Button("Edit");
         this.edit.setOnAction(event -> {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("addcontact.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("editcontact.fxml"));
                 Parent root = loader.load();
-                addcontactController a = loader.getController();
+                editcontactController a = loader.getController();
                 a.setData(this);
                 Main.rootStage.setScene(new Scene(root,400,500));
             }catch (Exception e){
@@ -57,11 +57,15 @@ public class contact {
         this.name = name;
     }
 
-    public ArrayList<String> getPhonenumber() {
-        return phonenumber;
+    public String getPhonenumber() {
+        String s = "";
+        for(String s1:phonenumber){
+            s+=s1+ "\n";
+        }
+        return s;
     }
 
-    public void setPhonenumber(ArrayList<String> phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber.add(phonenumber);
     }
 }
